@@ -1,0 +1,441 @@
+/* RESET I PODSTAWOWE STYLE */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f1011; /* Matowa głęboka czerń */
+    color: #e2e8f0; /* Jasnoszary / Srebrny tekst */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* TYPOGRAFIA */
+h1, h2, h3, h4 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #8a99ad;
+}
+
+/* STYLE WSPÓLNE / UTILITIES */
+.section {
+    padding: 100px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bg-darker {
+    background-color: #090a0a; /* Jeszcze ciemniejszy odcień dla kontrastu sekcji */
+    max-width: 100%;
+    padding-left: calc(8% + (100% - 1400px)/2);
+    padding-right: calc(8% + (100% - 1400px)/2);
+}
+
+@media (max-width: 1400px) {
+    .bg-darker {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #64748b; /* Stonowany szary */
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #ffffff 30%, #475569 100%);
+    -webkit-background-clip: text; /* Vendor prefix for older browsers */
+    background-clip: text;         /* Standard property for modern browsers */
+    -webkit-text-fill-color: transparent;
+
+/* PRZYCISKI */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #334155;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b;
+    border-color: #64748b;
+    transform: translateY(-2px);
+}
+
+/* NAWIGACJA (Efekt Szklany - Glassmorphism) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    z-index: 1000;
+    background: rgba(15, 16, 17, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+}
+
+.logo .dot {
+    color: #475569;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* SEKCJA HERO */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+    background: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f1011 60%);
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-sub {
+    font-family: 'JetBrains Mono', monospace;
+    color: #94a3b8;
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+/* PORTFOLIO (Siatka projektów) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #151719;
+    border: 1px solid #24272c;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-img-placeholder {
+    height: 240px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f1011 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #24272c;
+    transition: background 0.4s;
+}
+
+.project-img-placeholder span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Animacje najechania myszką (Hover Effects) */
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #475569;
+}
+
+.project-card:hover .project-img-placeholder {
+    background: linear-gradient(135deg, #334155 0%, #151719 100%);
+}
+
+/* SEKCJA TWITCH */
+.stream-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.stream-embed-placeholder {
+    background: #111214;
+    aspect-ratio: 16/9;
+    border: 1px solid #24272c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.stream-overlay-content {
+    text-align: center;
+}
+
+.live-badge {
+    background-color: #1e293b;
+    border: 1px solid #475569;
+    color: #94a3b8;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.stream-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-box {
+    background: #151719;
+    border: 1px solid #24272c;
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.sidebar-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #24272c;
+    padding-bottom: 10px;
+}
+
+.schedule-list {
+    list-style: none;
+}
+
+.schedule-list li {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.schedule-list .day {
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
+    width: 50px;
+}
+
+.schedule-list .time {
+    color: #64748b;
+    width: 70px;
+}
+
+.schedule-list .topic {
+    color: #94a3b8;
+}
+
+.specs p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+/* SEKCJA TIKTOK (Format pionowy) */
+.tiktok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tiktok-card {
+    background: #151719;
+    border: 1px solid #24272c;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 9/16; /* Proporcje wideo TikTok */
+    transition: border-color 0.3s;
+}
+
+.tiktok-video-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111214;
+}
+
+.tiktok-video-placeholder span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #334155;
+}
+
+.tiktok-card:hover {
+    border-color: #475569;
+}
+
+/* STOPKA */
+footer {
+    background: #090a0a;
+    padding: 60px 8% 30px 8%;
+    border-top: 1px solid #151719;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-logo .dot {
+    color: #475569;
+}
+
+.footer-socials a {
+    color: #64748b;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #474569;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* RESPONSIVE DESIGN (OPTYMALIZACJA MOBILNA) */
+@media (max-width: 968px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        display: none; /* Ukryte w wersji mobilnej (miejsce na menu hamburgerowe) */
+    }
+    
+    .section {
+        padding: 60px 5%;
+    }
+    
+    .hero-section {
+        padding: 0 5%;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .stream-container {
+        grid-template-columns: 1fr;
+    }
+}
+}

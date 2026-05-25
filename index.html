@@ -1,49 +1,53 @@
+# index.html
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G9RALEK // Hub</title>
+    <title>G9ralek</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="glass-nav">
-        <div class="logo">G9RALEK<span>//</span></div>
-        <div class="links">
-            <a href="https://twitch.tv/G9ralek">TWITCH</a>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Compact Hero -->
-        <header class="hero">
-            <h1 class="text-gradient">DESIGN & CONTENT</h1>
-            <p>Selected works and live broadcasts from the digital frontier.</p>
+    <div class="container">
+        <header>
+            <h1>G9ralek</h1>
+            <p>Twórca gier w Godot • Streamer Twitch</p>
         </header>
 
-        <!-- Small Project Promo -->
-        <section class="promo-grid">
-            <div class="promo-card project">
-                <span class="tag">LATEST PROJECT</span>
-                <h3>Visual Identity 2026</h3>
-                <div class="visual-placeholder"></div>
+        <section class="about">
+            <h2>O mnie</h2>
+            <p>
+                Mały twórca gier w silniku Godot. Aktualnie pracuję nad swoją pierwszą grą
+                i rozwijam kanał na Twitchu.
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>Projekty</h2>
+
+            <div class="project-card">
+                <h3>Pierwsza Gra</h3>
+                <p>
+                    Aktualnie tworzony projekt indie w silniku Godot.
+                </p>
             </div>
 
-            <!-- Content Promo (Twitch/TikTok) -->
-            <div class="promo-card content">
-                <span class="tag">LIVE NOW</span>
-                <h3>Join the Stream</h3>
-                <div class="live-indicator"></div>
-                <p>Broadcasting creative workflows every Monday.</p>
+            <div class="project-card">
+                <h3>Twitch Streamy</h3>
+                <p>
+                    Gameplay, tworzenie gier i chillowe streamy.
+                </p>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <code>© 2026 G9RALEK // ALL RIGHTS RESERVED</code>
-    </footer>
+        <footer>
+            <a href="#">Twitch</a>
+            <a href="#">GitHub</a>
+        </footer>
+    </div>
 
 </body>
 </html>

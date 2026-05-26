@@ -6,8 +6,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1b1f2a, #2b3245);
-    color: #e5e7eb;
+    background: linear-gradient(135deg, #161b26, #263248);
+
+    color: #f1f5f9;
 
     min-height: 100vh;
 
@@ -15,98 +16,112 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin: 0;
+    padding: 20px;
 }
 
 .container {
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
 
-    background: rgba(20, 24, 34, 0.95);
+    background: rgba(17, 24, 39, 0.95);
 
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
+    border-radius: 20px;
 
-    padding: 35px;
+    padding: 40px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 header {
     text-align: center;
-    margin-bottom: 35px;
+
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 42px;
-    color: #dbe4ff;
+    font-size: 48px;
+
     margin-bottom: 10px;
+
+    color: #dbeafe;
 }
 
 header p {
-    color: #9aa4c0;
+    color: #94a3b8;
+
     font-size: 15px;
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 section h2 {
     margin-bottom: 15px;
-    color: #c7d2fe;
-    font-size: 22px;
+
+    color: #bfdbfe;
+
+    font-size: 24px;
 }
 
 .about p {
-    line-height: 1.7;
-    color: #c2c8d6;
+    line-height: 1.8;
+
+    color: #cbd5e1;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+
+    gap: 18px;
 }
 
 .project-card {
-    background: #252c3d;
+    background: #1e293b;
 
-    padding: 18px;
+    padding: 20px;
 
-    border-radius: 14px;
-
-    transition: 0.2s ease;
+    border-radius: 16px;
 
     border: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
-    background: #2e374d;
+    transform: translateY(-4px);
+
+    background: #2b3a52;
 }
 
 .project-card h3 {
-    margin-bottom: 8px;
-    color: #edf2ff;
+    margin-bottom: 10px;
+
+    color: #eff6ff;
 }
 
 .project-card p {
-    color: #b3bdd1;
+    color: #cbd5e1;
+
     font-size: 14px;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    gap: 20px;
 
-    margin-top: 10px;
+    gap: 25px;
+
+    margin-top: 15px;
 }
 
 footer a {
     text-decoration: none;
-    color: #9fb4ff;
+
+    color: #93c5fd;
 
     transition: 0.2s ease;
 }

@@ -6,9 +6,7 @@
 }
 
 body {
-    background-image:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("images/background.png");
+    background-color: #1a1b26;
 
     background-position: center center;
     background-repeat: no-repeat;

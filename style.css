@@ -112,14 +112,16 @@ section h2 {
 }
 
 .fit-picture {
-    width: 100%;
-    max-width: 600px;
+    width: 512px;
 
     display: block;
 
-    margin-top: 15px;
+    margin: 20px auto 0 auto;
 
-    border-radius: 12px;
+    border-radius: 0px;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 footer {

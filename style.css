@@ -6,17 +6,21 @@
 }
 
 body {
-     background: linear-gradient(135deg, #161b26, #263248);
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("images/background.png");
 
-    color: #f1f5f9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    image-rendering: pixelated;
 
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 20px;
 }
 
 .container {

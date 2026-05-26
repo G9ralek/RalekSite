@@ -6,7 +6,14 @@
 }
 
 body {
-    background: linear-gradient(135deg, #161b26, #263248);
+    background-image: 
+    linear-gradient(rgba(10,15,25,0.75), rgba(10,15,25,0.75)),
+    url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     color: #f1f5f9;
 
@@ -17,6 +24,10 @@ body {
     align-items: center;
 
     padding: 20px;
+}
+
+.container {
+    backdrop-filter: blur(10px);
 }
 
 .container {
@@ -64,6 +75,8 @@ section h2 {
     color: #bfdbfe;
 
     font-size: 24px;
+
+    text-align: center;
 }
 
 .about p {

@@ -113,15 +113,19 @@ section h2 {
 
 .fit-picture {
     width: 512px;
+    height: 512px;
 
     display: block;
 
     margin: 20px auto 0 auto;
 
-    border-radius: 0px;
-
+    image-rendering: optimizeSpeed;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
+
+    -ms-interpolation-mode: nearest-neighbor;
+
+    border-radius: 0;
 }
 
 footer {
